@@ -9,13 +9,13 @@
 // ==========================================
 // REEMPLAZA estos valores con tus credenciales de Firebase
 const firebaseConfig = {
-    apiKey: "YOUR_FIREBASE_API_KEY",
-    authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-    databaseURL: "https://YOUR_PROJECT_ID-default-rtdb.firebaseio.com",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_PROJECT_ID.appspot.com",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyAUNzKgqOiOz5kQI7p8rCZCkbvNlI8CtmE",
+  authDomain: "nethelp-dd1b8.firebaseapp.com",
+  projectId: "nethelp-dd1b8",
+  storageBucket: "nethelp-dd1b8.firebasestorage.app",
+  messagingSenderId: "854398263415",
+  appId: "1:854398263415:web:13def199b009fb13aaa672",
+  measurementId: "G-058NTYK5LZ"
 };
 
 // Initialize Firebase
