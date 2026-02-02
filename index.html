@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NetHelp - Seguridad Familiar en Tiempo Real">
+    <meta name="theme-color" content="#1a1a2e">
+    
+    <!-- PWA Configuration -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icon-192.png">
+    
+    <title>NetHelp - Seguridad Familiar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Login Screen -->
+        <div id="loginScreen" class="screen active">
+            <div class="login-card">
+                <div class="logo">
+                    <svg width="60" height="60" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <h1>NetHelp</h1>
+                <p class="subtitle">Seguridad Familiar en Tiempo Real</p>
+                
+                <form id="loginForm">
+                    <input 
+                        type="text" 
+                        id="userName" 
+                        placeholder="Ingresa tu nombre" 
+                        required 
+                        autocomplete="name"
+                        maxlength="30"
+                    >
+                    <button type="submit" class="btn-primary">
+                        Conectar y Compartir Ubicación
+                    </button>
+                </form>
+                
+                <div id="loginError" class="error-message hidden"></div>
+            </div>
+        </div>
+
+        <!-- Map Screen -->
+        <div id="mapScreen" class="screen">
+            <div class="header">
+                <div class="header-content">
+                    <div class="user-info">
+                        <div class="status-indicator online"></div>
+                        <span id="currentUserName"></span>
+                    </div>
+                    <button id="logoutBtn" class="btn-logout">Desconectar</button>
+                </div>
+            </div>
+
+            <div id="map"></div>
+
+            <div class="members-panel">
+                <h3>Miembros Conectados (<span id="memberCount">0</span>)</h3>
+                <div id="membersList"></div>
+            </div>
+
+            <div id="connectionStatus" class="connection-status hidden">
+                <span class="status-icon">⚠️</span>
+                <span class="status-text">Reconectando...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-database-compat.js"></script>
+    
+    <!-- Leaflet CSS and JS (OpenStreetMap - 100% GRATIS) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script src="script.js" defer></script>
+</body>
+</html>
